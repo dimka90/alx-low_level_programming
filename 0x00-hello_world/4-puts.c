@@ -1,6 +1,7 @@
 #include<stdio.h>
 /**
- * main - This is a description
+ * main - Entry point for the program
+ *return - 0 for success and anyother value for error
  */
 int main(void)
 {
