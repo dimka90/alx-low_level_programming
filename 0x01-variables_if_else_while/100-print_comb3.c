@@ -8,20 +8,25 @@
  */
 int main(void)
 {
-	int digit1, digit2;
+	int first_digit;
 
-	for (digit1 = 0; digit1 < 9; digit1++)
+	int second_digit;
+
+	for (first_digit = 0; first_digit < 10; first_digit++)
 	{
-		for (digit2 = 0; digit2 < 9; digit2++)
+		for (second_digit = 1; second_digit < 10; second_digit++)
 		{
-			putchar((digit1 % 10) + '0');
-			putchar((digit2 % 10) + '0');
-
-			if (digit1 == 9 && digit2 == 9)
-				continue;
+			if (first_digit < second_digit && first_digit != second_digit)
+			{
+			putchar('0' + first_digit);
+			putchar('0' + second_digit);
+			if(first_digit + second_digit !=17)
+			{
 			putchar(',');
 			putchar(' ');
 		}
+		}
+	}
 	}
 
 	putchar('\n');
