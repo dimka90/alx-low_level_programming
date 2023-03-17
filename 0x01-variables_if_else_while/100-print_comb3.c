@@ -20,7 +20,7 @@ int main(void)
 			{
 			putchar('0' + first_digit);
 			putchar('0' + second_digit);
-			if(first_digit + second_digit !=17)
+			if (first_digit + second_digit != 17)
 			{
 			putchar(',');
 			putchar(' ');
