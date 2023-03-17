@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	int digit1
+	int digit1;
 
 	int  digit2;
 
