@@ -11,7 +11,7 @@ int number;
 
 for (number = 0; number <= 9; number++)
 {
-putchar(number);
+putchar('0' + number);
 putchar(',');
 }
 putchar('\n');
