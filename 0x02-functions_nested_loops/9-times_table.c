@@ -4,7 +4,7 @@
 *
 */
 
-void times_table(void)
+Cvoid times_table(void)
 {
 int i;
 
@@ -15,7 +15,7 @@ for (i = 0; i < 9; i++)
 
 for (j = 1; j < 9; j++)
 {
-_putchar(i * j) + '0');
+_putchar((i * j) + '0');
 }
 }
 
