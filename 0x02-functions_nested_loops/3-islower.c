@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* int _islower - checks to lower case
+* _islower - checks to lower case
 * @c: Stored interger value
 *
 * Description: The function check for lower or uppercase letter  nhhhhhhhhhhh
