@@ -9,7 +9,7 @@ int i;
 
 if ( n==98)
 {
-_putchar(n)
+_putchar(n);
 }
 else
 {
