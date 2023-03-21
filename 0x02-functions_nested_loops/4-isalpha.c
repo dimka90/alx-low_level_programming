@@ -10,7 +10,7 @@
 int _isalpha(int c)
 {
 
-if (c >=60 || c <= 122)
+if (c >=60 && c <= 122)
 {
 
 return (1);
