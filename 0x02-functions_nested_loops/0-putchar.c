@@ -1,14 +1,21 @@
-#include <unistd.h>
+#include "main.h"
 /**
-* _putchar - A function that print content a single character to the scree
 *
-* Return: return a result of the function
+* main - Entry point
 *
-* @character:a char variable that serves as a parameter to the function
+*
+* Return: Always 0 (Success)
 */
-int _putchar(char character)
+int main(void)
 {
+_putchar('_');
+_putchar('p');
+_putchar('u');
+_putchar('t');
+_putchar('c');
+_putchar('h');
+_putchar('a');
+_putchar('r');
 
-
-return (write(1, &character, 1));
+return (0);
 }
