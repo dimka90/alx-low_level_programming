@@ -9,11 +9,16 @@ int row;
 
 int column;
 
-for (int row = 1; row <= 10; row++)
+for (row = 1; row <= 10; row++)
 {
-for (int column = 0; column <= 14; column++)
+for (column = 0; column <= 14; column++)
 {
-_putchar('0' + column);
+if (column >9)
+{
+
+_putchar((column / 10) + '0');
+}
+_putchar('0' + (column % 10));
 }
 _putchar('\n');
 }
