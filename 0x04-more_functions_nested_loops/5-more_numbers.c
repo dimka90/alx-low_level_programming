@@ -13,7 +13,7 @@ for (row = 1; row <= 10; row++)
 {
 for (column = 0; column <= 14; column++)
 {
-if (column >9)
+if (column > 9)
 {
 
 _putchar((column / 10) + '0');
