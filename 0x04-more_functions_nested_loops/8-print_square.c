@@ -9,21 +9,22 @@ int outer;
 
 int inner;
 
-for (outer = 0; outer < size; outer++)
-{
 if (size <= 0)
 {
 _putchar('\n');
 }
 else
 {
+
+for (outer = 0; outer < size; outer++)
+{
 for (inner = 0; inner < size; inner++)
 {
 _putchar('#');
 }
 _putchar('\n');
-}
 
 }
 
+}
 }
