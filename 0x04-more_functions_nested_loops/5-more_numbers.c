@@ -17,5 +17,4 @@ _putchar('0' + column);
 }
 _putchar('\n');
 }
-_putchar('\n');
 }
