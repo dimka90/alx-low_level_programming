@@ -20,7 +20,7 @@ else if (counter % 5 == 0)
 {
 printf("Buzz");
 }
-else if (counter % 3 == 0 && counter % 5 == 0)
+else if ((counter % 3 == 0) && (counter % 5 == 0))
 {
 printf("FizzBuzz");
 }
