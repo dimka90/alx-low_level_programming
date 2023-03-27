@@ -8,7 +8,9 @@ int _strlen(char *s)
 {
 int word_count;
 
-for (word_count = 0; s[word_count] != '\0'; word_count++);
+for (word_count = 0; s[word_count] != '\0'; word_count++)
+{
+}
 
 
 return (word_count);
