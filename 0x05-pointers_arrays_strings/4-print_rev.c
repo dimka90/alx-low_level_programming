@@ -4,6 +4,7 @@
 */
 void print_rev(char *s)
 {
+char temp_letter=s[0];
 
 int word_count;
 
@@ -17,9 +18,9 @@ for (word_count = 0; s[word_count] != '\0'; word_count++)
 for (counter = 0; counter < word_count; counter++)
 {
 counter = counter - 1;
-char temp_letter = s[counter];
-s[i] = s[counter];
-s[counter] = temp_letter;
+temp_letter = s[counter];
+s[counter] = s[word_count];
+s[word_count] = temp_letter;
 
 _putchar(s[i]);
 }
