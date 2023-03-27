@@ -1,3 +1,4 @@
+#include "main.h"
 /**
 *print_rev - Print string in reverse order
 *@s: stored the address of the variable to be printed
