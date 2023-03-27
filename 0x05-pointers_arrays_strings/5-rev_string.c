@@ -24,4 +24,4 @@ s[counter] = temp_letter;
 }
 
 }
-}
+
