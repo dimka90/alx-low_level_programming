@@ -1,30 +1,25 @@
 #include "main.h"
 /**
-*print_rev - Print string in reverse order
-*@s: stored the address of the variable to be printed
-*/
+ * print_rev - imprime en reversa
+ * @s: string
+ * return: 0
+ */
 void print_rev(char *s)
 {
-char temp_letter = s[0];
+	int longi = 0;
+	int o;
 
-int word_count;
+	while (*s != '\0')
+	{
+		longi++;
+		s++;
+	}
+	s--;
+	for (o = longi; o > 0; o--)
+	{
+		_putchar(*s);
+		s--;
+	}
 
-int counter;
-
-for (word_count = 0; s[word_count] != '\0'; word_count++)
-{
-
-}
-
-for (counter = 0; counter < word_count; counter++)
-{
-word_count = word_count - 1;
-temp_letter = s[counter];
-s[counter] = s[word_count];
-s[word_count] = temp_letter;
-
-_putchar(s[counter]);
-}
-
-_putchar('\n');
+	_putchar('\n');
 }
