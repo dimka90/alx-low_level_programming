@@ -23,7 +23,7 @@ temp_letter = s[counter];
 s[counter] = s[word_count];
 s[word_count] = temp_letter;
 
-_putchar(s[i]);
+_putchar(s[counter]);
 }
 
 _putchar('\n');
