@@ -1,4 +1,3 @@
-#include <string.h>
 /**
 **_strncat- A function that append two strings
 *@dest: it stored a pointer to the destination string
@@ -10,10 +9,12 @@ char *_strncat(char *dest, char *src, int n)
 {
 int counter;
 
+
 int des_len;
 
-des_len = strlen(dest);
-
+for (des_len = 0; dest[des_len] != '\0'; des_len++)
+{
+}
 
 
 for (counter = 0; counter < n; counter++)
