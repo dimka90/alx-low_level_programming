@@ -11,8 +11,8 @@ int temp;
 
 for (counter = 0; counter < n--; counter++)
 {
-temp=a[counter];
-a[counter]=a[n];
+temp = a[counter];
+a[counter] = a[n];
 a[n] = temp;
 }
 
