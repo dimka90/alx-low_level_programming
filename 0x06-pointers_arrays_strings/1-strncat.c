@@ -17,7 +17,7 @@ for (des_len = 0; dest[des_len] != '\0'; des_len++)
 }
 
 
-for (counter = 0; counter < n; counter++)
+for (counter = 0; counter < n && src[counter] != '\0'; counter++)
 {
 
 dest[des_len + counter] = src[counter];
