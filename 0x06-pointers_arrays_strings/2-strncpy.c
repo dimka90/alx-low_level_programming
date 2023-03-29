@@ -15,9 +15,10 @@ for (counter = 0; counter < n && src[counter] != '\0'; counter++)
 dest[counter] = src[counter];
 
 }
-while(counter < n)
+while (counter < n)
 {
 dest[counter] = '\0';
+counter++;
 }
 return (dest);
 }
