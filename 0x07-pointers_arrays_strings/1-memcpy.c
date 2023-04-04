@@ -12,10 +12,10 @@ unsigned int counter = 0;
 
 while (counter < n)
 {
-buffer[counter] = src[n];
+dest[counter] = src[n];
 counter++;
 n--;
 }
 
-return (s);
+return (dest);
 }
