@@ -15,7 +15,7 @@ int counter_2 = n;
 
 	for (counter = 0; counter < counter_2; counter++)
 	{
-		dest[counter] = src[counter_2];
+		dest[counter] = src[counter];
 		n--;
 	}
 	return (dest);
