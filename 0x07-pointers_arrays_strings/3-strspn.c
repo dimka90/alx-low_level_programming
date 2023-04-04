@@ -4,6 +4,7 @@
  * @accept: a pointer that stores a substung vakue
  * Return: length of sub string
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int length = 0;
