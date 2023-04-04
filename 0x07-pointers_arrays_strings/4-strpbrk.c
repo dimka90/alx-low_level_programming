@@ -6,17 +6,17 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-		int counter;
 
 int counter_2;
 
-		for (counter = 0; s[counter] >= '\0'; counter++)
+		while (*s)
 		{
 			for (counter_2 = 0; accept[counter_2]; counter_2++)
 			{
 			if (*s == accept[counter_2])
 			return (s);
 			}
+s++;
 		}
 
 	return ('\0');
