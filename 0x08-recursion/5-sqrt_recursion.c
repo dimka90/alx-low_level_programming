@@ -4,6 +4,7 @@
  *
  * Return: the resulting square root
  */
+int sqrt_recursion(int number, int counter);
 int _sqrt_recursion(int n)
 {
 if (n < 0)
@@ -26,7 +27,7 @@ int sqrt_recursion(int number, int counter)
 {
 	if (counter * counter > number)
 		return (-1);
-	if (counter * counter == n)
+	if (counter * counter == number)
 		return (counter);
 	return (sqrt_recursion(number, counter + 1));
 }
