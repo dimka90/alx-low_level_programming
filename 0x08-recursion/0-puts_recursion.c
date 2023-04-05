@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
 *_puts_recursion - a function that prints a string, followed by a new line
 *@s: a pointer vairable to the string passed to the function
@@ -7,10 +7,13 @@
 void _puts_recursion(char *s)
 {
 
-while (*s !='\0')
+if (*s == '\0')
 {
-printf("%c", *s);
-s++;
+_putchar('\n');
 }
-printf("\n");
+else
+{
+_putchar(*s);
+_puts_recursion(s + 1);
+}
 }
