@@ -4,7 +4,15 @@
  *
  * Return: the resulting square root
  */
-int sqrt_recursion(int number, int counter);
+int sqrt_recursion(int number, int counter)
+{
+	if (counter * counter > number)
+		return (-1);
+	if (counter * counter == number)
+		return (counter);
+	return (sqrt_recursion(number, counter + 1));
+}
+
 int _sqrt_recursion(int n)
 {
 if (n < 0)
@@ -23,11 +31,3 @@ return (sqrt_recursion(n, 0));
  * @counter: counter variable
  * Return: -1 for negative numbers and a recursive call
  */
-int sqrt_recursion(int number, int counter)
-{
-	if (counter * counter > number)
-		return (-1);
-	if (counter * counter == number)
-		return (counter);
-	return (sqrt_recursion(number, counter + 1));
-}
