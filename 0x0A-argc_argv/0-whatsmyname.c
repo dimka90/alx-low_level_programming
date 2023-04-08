@@ -10,7 +10,7 @@
 int main(int  count, char *cmd_line_command[])
 {
 
-printf("%s", cmd_line_command[0]);
+printf("%s\n", cmd_line_command[0]);
 
 
 return (0);
