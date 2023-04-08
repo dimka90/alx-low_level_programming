@@ -2,15 +2,15 @@
 /**
 *main - Entry point , it also print the name of the
 *(file enterd on the command line)
-*@count: Keeps count of the command enterd on the shell
-*@cmd_line_command: A pointer variable that stores
+*@argc: Keeps count of the command enterd on the shell
+*@argv: A pointer variable that stores
 *( the command entered as string)
 *Return: Always 0(Succes)
 */
-int main(int  count, char *cmd_line_command[])
+int main(int  argc, char *argv[])
 {
 
-printf("%s\n", cmd_line_command[0]);
+printf("%s\n", argv[0]);
 
 
 return (0);
