@@ -10,7 +10,7 @@
 int main(int count, char *cmd_line_argument[])
 {
 (void)cmd_line_argument;
-printf("%d\n", count);
+printf("%d\n", count - 1);
 
 return (0);
 }
