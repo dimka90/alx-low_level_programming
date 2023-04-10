@@ -1,45 +1,65 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
 /**
- * main - Print the name of the program
- * @argc: Count arguments
- * @argv: Arguments
+ * is_num - loops through a n array to check for a number
+ * @str: a pointer to an array
  *
- * Return: Always 0 (Success)
+ * Return: 0 for not a number and 1 for a number
  */
+int is_num(char *str)
+{
+	/*Declaring variables*/
+	unsigned int counter;
 
-int main(int argc, char *argv[])
+	for (counter = 0; counter < strlen(str); counter++)
+
+	{
+		if (!isdigit(str[counter]))
+		{
+			return (0);
+		}
+	}
+	return (1);
+}
+/**
+ * cmd_line count:keeps count of cmd line variable -
+ * @cmd_line_argument: a pointer to a string
+ *
+ * Return: 1 for ereor and  0 for Success
+*/
+
+
+int main(int cmd_line_count, char *cmd_line_argument[])
 {
 
 	/*Declaring variables*/
-	int count;
-	int str_to_int;
-	int sum = 0;
+	int counter;
 
-	count = 1;
-	while (count < argc) /*Goes through the whole array*/
+	int number;
+
+	int total = 0;
+
+	for (counter = 1; counter < cmd_line_count; counter++)
 	{
-		if (check_num(argv[count]))
+		if (is_num(cmd_line_argument[counter]))
 
 		{
-			str_to_int = atoi(argv[count]); /*ATOI --> convert string to int*/
-			sum += str_to_int;
+			number = atoi(cmd_line_argument[count]);
+			total += number;
 		}
 
-		/*Condition if one of the number contains symbols that are not digits*/
 		else
 		{
 			printf("Error\n");
 			return (1);
 		}
 
-		count++;
+
 	}
 
-	printf("%d\n", sum); /*print sum*/
+	printf("%d\n", total);
 
 	return (0);
 }
