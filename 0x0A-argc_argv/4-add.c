@@ -24,7 +24,8 @@ int is_num(char *str)
 	return (1);
 }
 /**
- * cmd_line count:keeps count of cmd line variable -
+ *main - Entry point
+ * @cmd_line_count:keeps count of cmd line variable -
  * @cmd_line_argument: a pointer to a string
  *
  * Return: 1 for ereor and  0 for Success
@@ -46,7 +47,7 @@ int main(int cmd_line_count, char *cmd_line_argument[])
 		if (is_num(cmd_line_argument[counter]))
 
 		{
-			number = atoi(cmd_line_argument[count]);
+			number = atoi(cmd_line_argument[counter]);
 			total += number;
 		}
 
