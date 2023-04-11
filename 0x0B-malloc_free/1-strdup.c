@@ -25,8 +25,10 @@ return (NULL);
 /* this for loop count the number of string entered*/
 ;
 
-for (counter = 0; str[counter] != '\0'; counter++){
+for (counter = 0; str[counter] != '\0';)
+{
 
+counter++;
 }
 
 
@@ -36,7 +38,7 @@ copychar = malloc(sizeof(char) * counter + 1);
 
 if (copychar == NULL)
 {
-
+return (NULL);
 }
 for (innercounter = 0; innercounter <= counter; innercounter++)
 {
