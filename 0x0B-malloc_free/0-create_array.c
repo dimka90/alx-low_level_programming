@@ -13,7 +13,7 @@ unsigned int  counter;
 
 char *array = malloc(sizeof(char) * size);
 
-if (size == 0)
+if (size <= 0 || array == 0)
 {
 return (NULL);
 }
