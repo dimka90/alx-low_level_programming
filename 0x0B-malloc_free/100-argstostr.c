@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * argstostr -a function that splits a string into words
- * @ac: an integer 
+ * @ac: a variable of type interger
  * @av: double pointer array
  * Return: 0
  */
