@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 /**
 *malloc_checked - a function that allocates memory using malloc
 *@b: stored amount of memeory to create
@@ -7,13 +7,13 @@
 void *malloc_checked(unsigned int b)
 {
 
-unsigned int *ptr;
+unsigned int *pointer;
 
-ptr = malloc(sizeof(unsigned int));
+pointer = malloc(sizeof(b));
 
-if (ptr == NULL)
+if (pointer == NULL)
 {
 exit(98);
 }
-
+return (pointer);
 }
