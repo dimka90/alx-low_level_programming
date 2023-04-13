@@ -1,83 +1,52 @@
-/**
-*
-*/
 #include <stdlib.h>
-
-
-int str_len(char *s)
-{
-int counter;
-for (counter = 0; s[counter] != '\0'; counter++);
-
-return (counter);
-}
-
-
+/**
+* *string_nconcat - concatenates n bytes of a string to another string
+ * @s1: string to append to
+ * @s2: string to concatenate from
+ * @n: number of bytes from s2 to concatenate to s1
+ *
+ * Return: pointer to the resulting string
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-int str1_len;
-unsigned int str2_len;
+	char *new_stringPtr;
 
-int counter;
-
-unsigned int counter2;
-
-char *new_stringPointer;
-
-if (s1 == NULL)
+unsigned int i = 0, j = 0;
+unsigned int str1_len = 0;
+unsigned int str2_len = 0;
+for (str1_len = 0; ((s1 != NULL) && (s1[str1_len] != '\0')); )
 {
-str1_len = 0;
-s1 = "";
+str1_len++;
+}
+for (str2_len = 0; ((s2 != NULL) && (s2[str2_len] != '\0'));)
+{
+str2_len++;
 }
 
-if (s2 == NULL)
+if (n < str2_len)
 {
-str2_len = 0;
-s2 = "";
+new_stringPtr = malloc(sizeof(char) * (str1_len + n + 1));
 }
-
 else
 {
-str1_len = str_len(s1);
-
-}
-/*calling dimka len function*/
-
-str2_len = str_len(s2);
-
-/**
-*checking if n is greater than or equals to the
-*length of the string to be copied
-*/
-
-if (n >= str2_len)
-{
-n = str2_len;
+new_stringPtr = malloc(sizeof(char) * (str1_len + str2_len + 1));
 }
 
-new_stringPointer = malloc
-(sizeof(char) *
-(str1_len + str2_len + 1));
-
-if (new_stringPointer == NULL)
-{
+if (new_stringPtr == NULL)
 return (NULL);
-}
-/*copying the  first string to the new array created memory*/
-for (counter = 0; counter < str1_len; counter++)
+
+for (; i < str1_len; i++)
 {
-new_stringPointer[counter] = s1[counter];
+new_stringPtr[i] = s1[i];
 }
+while (n < str2_len && i < (str1_len + n))
 
-/*appending the second string to the new array created memory */
+new_stringPtr[i++] = s2[j++];
 
-for (counter2 = 0; counter2 < str2_len; counter2++)
-{
-new_stringPointer[counter] = s2[counter2];
-counter++;
+while (n >= str2_len && i < (str1_len + str2_len))
+new_stringPtr[i++] = s2[j++];
+
+new_stringPtr[i] = '\0';
+return (new_stringPtr);
+
 }
-
-new_stringPointer[counter] = '\0';
-return (new_stringPointer);
-}
-
