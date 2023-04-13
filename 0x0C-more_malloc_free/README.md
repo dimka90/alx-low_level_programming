@@ -1,0 +1,5 @@
+exit(3) is a function in the C standard library that terminates the calling process. The function takes an integer argument, which is used as the process's exit status. A successful exit status is typically represented by a value of zero.
+
+calloc is a function in the C standard library that allocates memory for an array of elements, similar to malloc. The difference is that calloc initializes the allocated memory to zero. The function takes two arguments: the number of elements to allocate and the size of each element in bytes.
+
+realloc is a function in the C standard library that changes the size of a previously allocated block of memory. The function takes two arguments: a pointer to the previously allocated memory block and the new size of the memory block in bytes. If the new size is larger than the previous size, realloc attempts to expand the memory block. If the new size is smaller than the previous size, realloc may reduce the size of the memory block or move it to a new location in memory. If realloc fails to allocate the requested size of memory, it returns a null pointer.
