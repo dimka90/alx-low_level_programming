@@ -15,11 +15,12 @@ return;
 }
 else if ((*d).name == NULL)
 {
-printf("Name (nil)");
+
+(*d).name = "(nil)";
 }
 else if ((*d).owner == NULL)
 {
-printf("onwer (nil)");
+(*d).owner = "(nil)";
 }
 else
 {
