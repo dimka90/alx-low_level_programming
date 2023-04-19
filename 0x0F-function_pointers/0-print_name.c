@@ -13,14 +13,12 @@ if (name == NULL || f == NULL)
 {
 return;
 }
-else
-{
 
 /* calling the print_name_as_is function thorough a function pointer */
 
 (*f)(name);
 
-}
+
 
 
 
