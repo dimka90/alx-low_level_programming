@@ -16,7 +16,7 @@ return;
 
 /* calling the print_name_as_is function thorough a function pointer */
 
-(*f)(name);
+f(name);
 
 
 
