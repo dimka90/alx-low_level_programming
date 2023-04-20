@@ -11,9 +11,12 @@
  */
 int main(int argc, char *argv[])
 {
+
+int operand1;
+int operand2;
+char *op;
+
 (void)argc;
-int operand num2;
-	char *op;
 
 	if (argc != 4)
 	{
@@ -21,9 +24,9 @@ int operand num2;
 		exit(98);
 	}
 
-	num1 = atoi(argv[1]);
+	operand1 = atoi(argv[1]);
 	op = argv[2];
-	num2 = atoi(argv[3]);
+	operand2 = atoi(argv[3]);
 
 	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
@@ -31,14 +34,14 @@ int operand num2;
 		exit(99);
 	}
 
-	if ((*op == '/' && num2 == 0) ||
-	    (*op == '%' && num2 == 0))
+	if ((*op == '/' && operand2 == 0) ||
+	    (*op == '%' && operand2 == 0))
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	printf("%d\n", get_op_func(op)(num1, num2));
+	printf("%d\n", get_op_func(op)(operand1, operand2));
 
 	return (0);
 }
