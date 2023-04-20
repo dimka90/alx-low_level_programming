@@ -16,13 +16,13 @@ int main(int cmd_line_counter, char *cmd_line_array[])
 
 	char *ptr_arr;
 
-	if (cmd_iine_counter != 2)
+	if (cmd_line_counter != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
 
-	data = atoi(argv[1]);
+	data = atoi(cmd_line_array[1]);
 
 	if (data < 0)
 	{
