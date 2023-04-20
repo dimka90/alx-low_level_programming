@@ -12,7 +12,7 @@ int sum_them_all(const unsigned int n, ...)
 va_list number_list;
 int list_value;
 
-int counter;
+unsigned int counter;
 int sum;
 if (n == 0)
 {
@@ -21,9 +21,9 @@ return (0);
 
 va_start(number_list, n);
 
-sum = n;
-
+sum = 0;
 list_value = va_arg(number_list, int);
+counter = 0;
 while (counter < n)
 {
 sum = sum + list_value;
