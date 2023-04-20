@@ -29,6 +29,7 @@ ptr_string = va_arg(strings, char*);
 if(ptr_string == NULL)
 {
 printf("(nil)");
+break;
 }
 printf("%s", ptr_string);
 if (n == counter + 1)
