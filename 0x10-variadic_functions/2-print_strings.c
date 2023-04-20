@@ -26,7 +26,7 @@ for (counter = 0; counter < n; counter++)
 
 ptr_string = va_arg(strings, char*);
 
-if(ptr_string == NULL)
+if (ptr_string == NULL)
 {
 printf("(nil)");
 break;
