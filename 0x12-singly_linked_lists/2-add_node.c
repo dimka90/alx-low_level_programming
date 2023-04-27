@@ -11,10 +11,11 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-list_t *new;
-int length;
 
-for (length = 0; str[length] !='\0';)
+int length;
+list_t *new;
+
+for (length = 0; str[length] != '\0';)
 {
 length++;
 }
@@ -24,7 +25,7 @@ if (new == NULL)
 	return (NULL);
 
 new->str = strdup(str);
-new->len = len;
+new->len = length;
 new->next = (*head);
 (*head) = new;
 
