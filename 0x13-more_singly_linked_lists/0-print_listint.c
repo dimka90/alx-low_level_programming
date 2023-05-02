@@ -1,4 +1,4 @@
-#include "lists.h"
+     #include "lists.h"
 
 /**
 * print_listint - a function that prints the element of a list
@@ -13,14 +13,10 @@ const listint_t *temporal = h;
 size_t count = 0;
 while (temporal->next != NULL)
 {
-
-printf("%d",temporal->n);
+printf("%d", temporal->n);
 temporal = temporal->next;
 count++;
 }
 
 return (count);
 }
-
-
-
