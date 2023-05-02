@@ -11,7 +11,7 @@ size_t print_listint(const listint_t *h)
 const listint_t *temporal = h;
 
 size_t count = 0;
-while (temporal->next != NULL)
+while (temporal != NULL)
 {
 printf("%d\n", temporal->n);
 count++;
