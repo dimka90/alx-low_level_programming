@@ -1,0 +1,9 @@
+Algorithm for 4
+A function that frees a listint_t list.
+
+1.Declare a tem pointer of type struct 
+2..Declear a function that take a pointer to the head of the list
+2.Start  a while loop that will continue to run as long as the head pointer is not NULL. 
+This loop will iterate through the linked list starting at the head node.
+3.inside the loop, assigns the next pointer of the current node (pointed to by head) to the temp pointer variable. 
+This stores a reference to the next node in the list before we free the current node.
