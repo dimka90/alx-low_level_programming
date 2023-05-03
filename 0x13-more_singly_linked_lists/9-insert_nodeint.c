@@ -30,7 +30,7 @@ newNode->next = *head;
 return (newNode);
 }
 counter = 0;
-while (newNode != NULL && counter < idx)
+while (temporalNode != NULL && counter < idx)
 {
 if (counter == idx - 1)
 {
