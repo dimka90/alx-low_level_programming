@@ -19,11 +19,11 @@ track_count = 0;
 counter = 63;
 xor = n ^ m;
 
-while(counter >= 0)
+while (counter >= 0)
 {
 
 bit = xor >> counter;
-if(bit & counter)
+if (bit & 1)
 {
 track_count++;
 }
