@@ -10,28 +10,26 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-int o;
-int  w;
-int len = 0;
+int file_descriptor;
+int  bytes;
+int length = 0;
 
 if (filename == NULL)
 return (-1);
 
 if (text_content != NULL)
 {
-while(text_content)
-{
-len++;
-}
+for (length = 0; text_content[length];)
+	length++;
 }
 
-o = open(filename, O_WRONLY | O_APPEND);
-w = write(o, text_content, len);
+file_description = open(filename, O_WRONLY | O_APPEND);
+bytes = write(file_description, text_content, length);
 
-if (o == -1 || w == -1)
+if (file_description == -1 || bytes == -1)
 return (-1);
 
-close(o);
+close(file_description);
 
 return (1);
 }
