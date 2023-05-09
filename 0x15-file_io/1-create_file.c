@@ -21,9 +21,7 @@ return (-1);
 }
 if (text_content != NULL)
 {
-
-length = 0;
-while (text_content[length])
+for (length = 0; text_content[length];)
 {
 length++;
 }
