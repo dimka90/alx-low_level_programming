@@ -17,6 +17,10 @@ if (filename == NULL)
 {
 return (-1);
 }
+if(text_content ==NULL)
+{
+file_descriptor = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+}
 if (text_content != NULL)
 {
 for (length = 0; text_content[length];)
