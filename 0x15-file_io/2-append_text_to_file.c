@@ -23,13 +23,13 @@ for (length = 0; text_content[length];)
 	length++;
 }
 
-file_description = open(filename, O_WRONLY | O_APPEND);
-bytes = write(file_description, text_content, length);
+file_descriptor = open(filename, O_WRONLY | O_APPEND);
+bytes = write(file_descriptor, text_content, length);
 
-if (file_description == -1 || bytes == -1)
+if (file_descriptor == -1 || bytes == -1)
 return (-1);
 
-close(file_description);
+close(file_descriptor);
 
 return (1);
 }
