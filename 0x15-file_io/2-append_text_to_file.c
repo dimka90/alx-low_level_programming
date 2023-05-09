@@ -28,11 +28,10 @@ file_descriptor = open(filename, O_WRONLY | O_APPEND);
 if (file_descriptor < 0)
 return (-1);
 
-
+bytes = write(file_descriptor, text_content, length);
 if (bytes < 0)
 return (-1);
 
-bytes = write(file_descriptor, text_content, length);
 
 close(file_descriptor);
 
