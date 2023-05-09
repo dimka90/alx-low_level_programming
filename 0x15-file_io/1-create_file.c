@@ -13,9 +13,6 @@ int create_file(const char *filename, char *text_content)
 int file_descriptor;
 int  bytes;
 int length;
-
-int file_permission;
-
 if (filename == NULL)
 {
 return (-1);
@@ -26,9 +23,8 @@ while (text_content[length])
 length++;
 }
 
-file_permission = 0600;
 
-file_descriptor = open(filename, O_CREAT | O_RDWR | O_TRUNC, file_permission);
+file_descriptor = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 if (file_descriptor < 0)
 {
 return (-1);
