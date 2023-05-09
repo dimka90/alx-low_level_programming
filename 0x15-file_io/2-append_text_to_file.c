@@ -24,10 +24,15 @@ for (length = 0; text_content[length];)
 }
 
 file_descriptor = open(filename, O_WRONLY | O_APPEND);
-bytes = write(file_descriptor, text_content, length);
 
-if (file_descriptor == -1 || bytes == -1)
+if (file_descriptor < 0)
 return (-1);
+
+
+if (bytes < 0)
+return (-1);
+
+bytes = write(file_descriptor, text_content, length);
 
 close(file_descriptor);
 
