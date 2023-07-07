@@ -83,6 +83,7 @@ free(new_dog);
 free((*new_dog).name);
 return (NULL);
 }
+/** copying content to to the new;y created memory for dog name and owner  */
 cp_str((*new_dog).name, name);
 cp_str((*new_dog).owner, owner);
 
@@ -90,4 +91,5 @@ cp_str((*new_dog).owner, owner);
 
 return (new_dog);
 }
+
 
