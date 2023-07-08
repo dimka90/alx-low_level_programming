@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
 *binary_to_uint - a function that convert an interger to binary
 *@b:a pointer vairable that points to an array of binary strings
@@ -16,11 +17,11 @@ return (0);
 }
 for (counter = 0; *(b + counter); counter++)
 {
-if (*(b + i) < '0' || (*(b + counter)) > '1')
+if (*(b + counter) < '0' || (*(b + counter)) > '1')
 {
 return (0);
 }
-unsigned_int = binary * usigned_int + (*(b + counter) - '0');
+unsigned_int = binary * unsigned_int + (*(b + counter) - '0');
 }
 return (unsigned_int);
 }
