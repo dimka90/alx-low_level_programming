@@ -33,10 +33,9 @@ write(STDOUT_FILENO, Buffer, bytes);
 }
 else
 {
-
-break;
+return (0);
 }
 }
-
-return 1;
+close(inhandler);
+return (1);
 }
