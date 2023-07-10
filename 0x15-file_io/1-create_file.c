@@ -19,13 +19,6 @@ if (filename == NULL)
 {
 return (-1);
 }
-if (text_content == NULL)
-{
-
-file_descriptor = open(filename, O_CREAT | O_RDWR, 0600);
-close(file_descriptor);
-}
-
 for (str_len = 0; text_content[str_len];)
 {
 str_len++;
