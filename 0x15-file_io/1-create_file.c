@@ -30,7 +30,7 @@ for (str_len = 0; text_content[str_len];)
 {
 str_len++;
 }
-file_descriptor = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+file_descriptor = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
 
 write_byte = write(file_descriptor, text_content, str_len);
 if (file_descriptor == -1 || write_byte == -1)
