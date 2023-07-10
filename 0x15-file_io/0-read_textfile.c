@@ -20,10 +20,15 @@ return (0);
 
 inhandler = open(filename, O_RDONLY);
 
-Buffer = malloc(sizeof(char) * letters + 1);
-
 if (inhandler == -1)
 {
+return (0);
+}
+
+Buffer = malloc(sizeof(char) * letters + 1);
+if (Buffer == NULL)
+{
+close(inhandler);
 return (0);
 }
 
