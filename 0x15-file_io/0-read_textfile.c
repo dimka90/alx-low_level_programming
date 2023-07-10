@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*read_textfile - a function that reads text and write it out to the STDOUT"
+*read_textfile- a function that reads text and write it out to the STDOUT"
 *@filename:The name of the file to read from
 *@letters:size of file to read
 *Return:the number of byte read
@@ -20,7 +20,7 @@ return (0);
 
 inhandler = open(filename, O_RDONLY);
 
-Buffer=malloc(sizeof(char) * letters + 1);
+Buffer = malloc(sizeof(char) * letters + 1);
 if (Buffer == NULL)
 {
 
