@@ -11,6 +11,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 char Buffer[1024];
 ssize_t inhandler;
 int bytes;
+int size;
 if (filename == NULL)
 {
 
@@ -23,19 +24,18 @@ if (inhandler == -1)
 {
 return (0);
 }
-while (1)
-{
+
 bytes = read(inhandler, Buffer, letters);
 
 if (bytes > 0)
 {
-write(STDOUT_FILENO, Buffer, bytes);
+size = write(STDOUT_FILENO, Buffer, bytes);
 }
 else
 {
 return (0);
 }
-}
+
 close(inhandler);
-return (1);
+return (size);
 }
