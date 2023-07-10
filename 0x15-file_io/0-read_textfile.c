@@ -8,7 +8,7 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-char Buffer[1024];
+char *Buffer;
 ssize_t inhandler;
 int bytes;
 int size;
@@ -19,6 +19,13 @@ return (0);
 }
 
 inhandler = open(filename, O_RDONLY);
+
+Buffer=malloc(sizeof(char) * letters + 1);
+if (Buffer == NULL)
+{
+
+return (0);
+}
 
 if (inhandler == -1)
 {
