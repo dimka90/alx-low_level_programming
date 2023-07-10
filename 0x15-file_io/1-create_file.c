@@ -28,7 +28,6 @@ file_descriptor = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 write_byte = write(file_descriptor, text_content, str_len);
 if (file_descriptor == -1 || write_byte == -1)
 {
-close(file_descriptor);
 return (-1);
 
 }
