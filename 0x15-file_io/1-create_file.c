@@ -38,7 +38,7 @@ if (file_descriptor == -1 || write_byte == -1)
 return (-1);
 
 }
-
+close(file_descriptor);
 return (1);
 }
 
