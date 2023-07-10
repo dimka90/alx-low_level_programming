@@ -35,6 +35,7 @@ size = write(STDOUT_FILENO, Buffer, bytes);
 }
 else
 {
+close(inhandler);
 return (0);
 }
 
