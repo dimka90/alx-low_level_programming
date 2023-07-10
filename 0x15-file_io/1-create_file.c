@@ -19,9 +19,12 @@ if (filename == NULL)
 {
 return (-1);
 }
+if (text_content != NULL)
+{
 for (str_len = 0; text_content[str_len];)
 {
 str_len++;
+}
 }
 file_descriptor = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 
