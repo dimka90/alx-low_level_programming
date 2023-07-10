@@ -21,11 +21,6 @@ return (0);
 inhandler = open(filename, O_RDONLY);
 
 Buffer = malloc(sizeof(char) * letters + 1);
-if (Buffer == NULL)
-{
-
-return (0);
-}
 
 if (inhandler == -1)
 {
