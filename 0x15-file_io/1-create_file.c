@@ -5,36 +5,27 @@
 *@text_content: a pointer that contains the word to be written to the file
 *Return: 1 on succes and -1 on error
 */
-
 int create_file(const char *filename, char *text_content)
 {
-int write_byte;
-int  file_descriptor;
-int str_len;
+	int fd, w, len = 0;
 
+	if (filename == NULL)
+		return (-1);
 
+	if (text_content != NULL)
+	{
+		for (len = 0; text_content[len];)
+			len++;
+	}
 
-if (filename == NULL)
+	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	w = write(fd, text_content, len);
 
-{
-return (-1);
-}
-if (text_content != NULL)
-{
-for (str_len = 0; text_content[str_len];)
-{
-str_len++;
-}
-}
-file_descriptor = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	if (fd == -1 || w == -1)
+		return (-1);
 
-write_byte = write(file_descriptor, text_content, str_len);
-if (file_descriptor == -1 || write_byte == -1)
-{
-return (-1);
+	close(fd);
 
-}
-close(file_descriptor);
-return (1);
+	return (1);
 }
 
