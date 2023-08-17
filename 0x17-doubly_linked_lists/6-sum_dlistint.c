@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-*sum_dlistint -  function that returns the sum of all the data (n) of a dlistint_t linked list.
+*sum_dlistint -returns the sum of all the data (n) of a dlistint_t linked list.
 *@head: pointer to the start of a doubly link list
 *
 *Return: sum of the element in a list
@@ -14,7 +14,7 @@ if (head == NULL)
 {
 return (0);
 }
-while(headcopy != NULL)
+while (headcopy != NULL)
 {
 sum = sum + headcopy->n;
 headcopy = headcopy->next;
