@@ -1,0 +1,2 @@
+0x18. C - Dynamic libraries
+Dynamic libraries, also known as shared libraries, are a type of code library in computer programming. They provide a way to package and distribute reusable code that can be loaded into memory by multiple programs at runtime. Unlike static libraries, which are linked with the program during compilation, dynamic libraries are loaded and linked with the program when it starts running.
