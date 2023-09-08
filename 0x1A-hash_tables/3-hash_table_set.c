@@ -14,7 +14,7 @@ size_t valuelen = strlen(value) + 1;
 hash_node_t *node = malloc(sizeof(hash_node_t));
 unsigned long int hash = hash_djb2((unsigned char *) key) % ht->size;
 if (!ht || !key)
-	return (0)
+	return (0);
 
 
 if (node == NULL)
