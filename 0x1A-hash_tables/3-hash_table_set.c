@@ -31,17 +31,16 @@ return (0);
 }
 strcpy(node->value, value);
 
-/*insertion */
+/*insertion
+
 if (ht->array[hash] == NULL)
 {
 ht->array[hash] = node;
 return (1);
 }
-else
-{
+*/
 node->next = ht->array[hash];
 ht->array[hash] = node;
 return (1);
 
-}
 }
