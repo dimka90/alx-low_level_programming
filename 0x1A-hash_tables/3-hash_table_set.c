@@ -39,9 +39,9 @@ return (1);
 }
 else
 {
-        node->next = ht->array[hash];
-	ht->array[hash] = node;
-	return (1);
+node->next = ht->array[hash];
+ht->array[hash] = node;
+return (1);
 
 }
 }
