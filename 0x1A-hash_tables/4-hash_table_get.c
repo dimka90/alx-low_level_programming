@@ -10,7 +10,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 hash_node_t *tempt = NULL;
 /* Getting the hash value from the hash function */
 unsigned long int keyindex = hash_djb2((unsigned char *) key) % ht->size;
-if (!ht || !key)
+if (!ht || !key || key[0] == '\0')
 	return (NULL);
 
 tempt = ht->array[keyindex];
