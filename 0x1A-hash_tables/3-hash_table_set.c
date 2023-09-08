@@ -1,45 +1,44 @@
-#include "hash_tables.h"
-/**
- * hash_table_set - a function that adds an element to the hash table
- * @key: key yo be hash
- * @ht: hash table
- * @value: value to store
- * Return: 1 for success and 0 for failure
- */
 
+#include "hash_tables.h"
+hash_node_t *new_node(hash_node_t *old);
+/**
+ * hash_table_set - function that adds an element to the hash table.
+ * @ht: the hash table you want to add or update the key/value to
+ * @key: the key. key can not be an empty string
+ * @value: the value associated with the key.
+ * Return: 1 if it succeeded, 0 otherwise.
+ */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-size_t keylen = strlen(key) + 1;
-size_t valuelen = strlen(value) + 1;
-hash_node_t *node = malloc(sizeof(hash_node_t));
-unsigned long int hash = hash_djb2((unsigned char *) key) % ht->size;
-hash_node_t *indexnode = ht->array[hash];
-if (!ht || !key)
-	return (0);
-while (indexnode != NULL)
-{
-if (strcmp(indexnode->key, key) == 0)
-{
-free(indexnode->value);
-indexnode->value = malloc(sizeof(char) * keylen);
-strcpy(indexnode->value, value);
-return (1);
+
+	hash_node_t *node = NULL;
+hash_node_t *newNode = NULL;
+	unsigned long int index;
+
+	if (!key || !ht)
+		return (0);
+
+	index = hash_djb2((unsigned char *) key) % ht->size;
+	node = ht->array[index];
+	/* update key */
+	while (node != NULL)
+	{
+		if (strcmp(node->key, key) == 0)
+		{
+			free(node->value);
+			node->value = strdup(value);
+			return (1);
+		}
+		node = node->next;
+	}
+	newNode = malloc(sizeof(hash_node_t));
+	if (!newNode)
+		return (0);
+	newNode->key = strdup(key);
+	newNode->value = strdup(value);
+	newNode->next = ht->array[index];
+	ht->array[index] = newNode;
+
+	return (1);
 }
-indexnode = indexnode->next;
-}
-if (node == NULL)
-	return (0);
-node->key = malloc(sizeof(char) * keylen);
-if (node->key == NULL)
-	return (0);
-strcpy(node->key, key);
-node->value = malloc(sizeof(char) * valuelen);
-if (node->value == NULL)
-{
-return (0);
-}
-strcpy(node->value, value);
-node->next = ht->array[hash];
-ht->array[hash] = node;
-return (1);
-}
+
