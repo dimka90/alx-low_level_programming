@@ -3,6 +3,6 @@
 # SRC: c files to be compile
 CC = gcc
 SRC = school.c main.c 
-all: school
+all: $(SRC)
 	gcc -o school $(SRC)
 	
