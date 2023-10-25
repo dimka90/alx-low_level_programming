@@ -1,0 +1,8 @@
+# a file that creat a makefile using variables
+# CC: compiler to use(gcc)
+# SRC: c files to be compile
+CC = gcc
+SRC = school.c main.c 
+all: school
+	gcc -o school $(SRC)
+	
