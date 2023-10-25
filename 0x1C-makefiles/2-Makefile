@@ -1,0 +1,7 @@
+# a file that converts an object using the makfile syntac
+CC = gcc 
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+all: $(OBJ)
+	$(CC) -o $(NAME) $(SRC)
