@@ -1,0 +1,14 @@
+# added more vairables which automatically cleans, update and delete files
+CC = gcc 
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+all: $(OBJ)
+	$(CC) -o $(NAME) $(SRC)
+clean:
+	$(RM) *~ $(NAME)
+oclean:
+	$(OBJ)
+fclean:clean oclean
+re:fclean all
