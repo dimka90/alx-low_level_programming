@@ -12,16 +12,16 @@
 
 int linear_search(int *array, size_t size, int value)
 {
-size_t counter;
+int counter;
 if (array == NULL)
 {
 return (-1);
 }
-for (counter = 0; counter < size; counter++)
+for (counter = 0; counter < (int)size; counter++)
 {
 
 	/* printing each value in the array */
-	printf("Value checked array[%ld] = [%d]\n", counter, array[counter]);
+	printf("Value checked array[%u] = [%d]\n", counter, array[counter]);
 
 	/* checking for match in the array */
 
