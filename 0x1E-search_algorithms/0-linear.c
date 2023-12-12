@@ -27,7 +27,7 @@ for (counter = 0; counter < (int)size; counter++)
 
 	if (array[counter] == value)
 	{
-		return (array[counter]);
+		return counter;
 	}
 }
 
